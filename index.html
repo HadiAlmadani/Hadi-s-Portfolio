@@ -1,39 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hadi Almadani Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-  <div class="container">
-    <img src="Hadi Pic.JPEG" alt="Hadi Almadani" class="profile-img"/>
-    <h1>Hadi Almadani</h1>
-    <p>Mechanical Engineering Student at UMass Amherst</p>
-    <div class="buttons">
-      <a href="mailto:hadialmadani0@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/hadi-almadani-a14a832b1/">LinkedIn</a>
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Mail, Linkedin } from "lucide-react";
+
+export default function HadiPortfolio() {
+  return (
+    <div className="min-h-screen bg-white text-black p-8 space-y-12">
+      <header className="text-center space-y-2">
+        <img
+          src="/Hadi Pic.JPEG"
+          alt="Hadi Almadani"
+          className="mx-auto rounded-full w-40 h-40 object-cover shadow-lg"
+        />
+        <h1 className="text-4xl font-bold">Hadi Almadani</h1>
+        <p className="text-lg">Mechanical Engineering Student at UMass Amherst</p>
+        <div className="flex justify-center space-x-4">
+          <a href="mailto:hadialmadani0@gmail.com">
+            <Button variant="outline"><Mail className="mr-2" /> Email</Button>
+          </a>
+          <a href="https://www.linkedin.com/in/hadi-almadani-a14a832b1/" target="_blank">
+            <Button variant="outline"><Linkedin className="mr-2" /> LinkedIn</Button>
+          </a>
+        </div>
+      </header>
+
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold border-b pb-2">About Me</h2>
+        <p>
+          I’m a Mechanical Engineering student at UMass Amherst passionate about hands-on projects, sustainable technologies,
+          and creative problem-solving. My journey so far has been shaped by leadership, entrepreneurship, and
+          collaboration—values I bring into every project.
+        </p>
+      </section>
+
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold border-b pb-2">Projects</h2>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <Card>
+            <CardContent className="p-4 space-y-2">
+              <img src="/clock.jpg" alt="3D Clock" className="rounded-lg" />
+              <h3 className="text-xl font-bold">3D-Printed Mechanical Clock</h3>
+              <p>Designed in SolidWorks, 3D printed, and assembled for accurate mechanical timing.</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-4 space-y-2">
+              <img src="/gearbox.jpg" alt="Gearbox" className="rounded-lg" />
+              <h3 className="text-xl font-bold">Gearbox (243:1 Ratio)</h3>
+              <p>Designed a 5-gear system using SolidWorks and additive manufacturing for demonstration.</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-4 space-y-2">
+              <img src="/robot.jpg" alt="Arduino Robot" className="rounded-lg" />
+              <h3 className="text-xl font-bold">Arduino Autonomous Robot</h3>
+              <p>Used Arduino, C++, and sensors to build an obstacle-avoiding robot with real-time response.</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-4 space-y-2">
+              <img src="/simulation.jpg" alt="Dining Hall Simulation" className="rounded-lg" />
+              <h3 className="text-xl font-bold">Dining Hall Seat Occupancy Simulation</h3>
+              <p>Simulated real-world data in R to analyze seat usage and visualize patterns.</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-4 space-y-2">
+              <img src="/smv.jpg" alt="Super Mileage Vehicle" className="rounded-lg" />
+              <h3 className="text-xl font-bold">Super Mileage Vehicle (SMV Club)</h3>
+              <p>Modeled and tested vehicle components using SolidWorks, focused on fuel efficiency and team collaboration.</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-4 space-y-2">
+              <img src="/wrench.jpg" alt="Wrench Design" className="rounded-lg" />
+              <h3 className="text-xl font-bold">Wrench Design and Simulation</h3>
+              <p>Used ANSYS to test stress and deformation on a custom wrench design.</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-4 space-y-2">
+              <img src="/fumi.jpg" alt="Photonics Project" className="rounded-lg" />
+              <h3 className="text-xl font-bold">Photonics: FUMI Tech Project</h3>
+              <p>Presented technical solutions to global problems with a team, involving site visits and engineering professionals.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <footer className="text-center pt-12 border-t">
+        <p>© {new Date().getFullYear()} Hadi Almadani · 64 Sohier Rd, Beverly, MA · 978-631-7890</p>
+      </footer>
     </div>
-    <section>
-      <h2>About Me</h2>
-      <p>I’m a Mechanical Engineering student at UMass Amherst passionate about hands-on projects, sustainable technologies, and creative problem-solving. My journey so far has been shaped by leadership, entrepreneurship, and collaboration—values I bring into every project.</p>
-    </section>
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>3D-Printed Mechanical Clock:</strong> SolidWorks, 3D printed, and assembled.</li>
-        <li><strong>Gearbox (243:1 Ratio):</strong> 5-gear system designed and printed.</li>
-        <li><strong>Arduino Autonomous Robot:</strong> C++, Arduino, sensor-based obstacle avoidance.</li>
-        <li><strong>Dining Hall Simulation:</strong> Seat occupancy analysis using R.</li>
-        <li><strong>SMV Club:</strong> Eco-marathon project (SolidWorks, testing, etc.).</li>
-        <li><strong>Wrench Design:</strong> Mechanical analysis using ANSYS.</li>
-        <li><strong>Photonics FUMI Tech Project:</strong> Global teamwork and solution presentation.</li>
-      </ul>
-    </section>
-    <footer>
-      <p>© 2025 Hadi Almadani · 64 Sohier Rd, Beverly, MA · 978-631-7890</p>
-    </footer>
-  </div>
-</body>
-</html>
+  );
+}
