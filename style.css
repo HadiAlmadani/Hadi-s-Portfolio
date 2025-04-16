@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fdfdfd;
+  color: #222;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.buttons a {
+  display: inline-block;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #eaeaea;
+  color: #222;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+section {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #777;
+}
